@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: "Century Gothic", sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+header {
+  background-color: #2f4f2f;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 32px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.brand {
+  font-family: 'Montserrat', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Conteúdo das atividades */
+.atividades {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.atividade-card {
+  background-color: #e4ffee;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-placeholder {
+  background-color: #ccc;
+  height: 150px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 700px) {
+  .nav-desktop {
+    display: flex;
+    gap: 1.2rem;
+  }
+  .menu-btn, .menu-dropdown {
+    display: none !important;
+  }
+}
+@media (max-width: 699px) {
+  .nav-desktop {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+}

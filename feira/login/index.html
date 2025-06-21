@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    
+   
+</head>
+<body>
+    <form action="*" method="post">
+    <div class="input-group">
+        <h2>Login</h2>
+        <form id="loginform">
+            <div class="input-container">
+               
+                <input placeholder="Usuario" type="text" id="username"name="username" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/user.png" alt="user"/>
+            </div>
+            <div class="input-container">
+                <input placeholder= "Senha" type="password" id="password" name="password" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/password--v1.png" alt="password--v1"/>
+                
+                
+            </div>
+           <button type="submit">entrar</button>
+            </form>
+            <script>
+                const loginform =document.getElementById('loginform');
+                loginform.addEventListener('sunmit',function (event) {
+                    event.preventDefault();
+                    const usernameInput = document.getElementById('username');
+                    const passwordInput =document.getElementById('password');
+                    
+                    const username = usernameInput.value;
+                    const password=passwordInput.value;
+
+                    if(username ==='usuario' && password === '12345' ){
+                        alert('login bem-sucedido');
+                       window.location.href= 'pagina_principal'; 
+
+                    }
+                    else {
+                        alert('Nome de usuario ou senha incorreta.')
+                    }
+                });
+              
+            </script>
+    </div>
+    
+</body>
+</html>

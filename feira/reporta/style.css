@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+body {
+  font-family: 'Quicksand', Arial, sans-serif;
+  margin: 0;
+  background-image: url('Imagem\ do\ WhatsApp\ de\ 2025-06-18\ à\(s\)\ 23.05.47_bacf890d.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #222;
+}
+
+header {
+  background: #85a27f;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.logo {
+  height: 36px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #222;
+  cursor: pointer;
+}
+
+nav {
+  background: #85a27f;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li a {
+  display: block;
+  padding: 10px 5px;
+  color: #222;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.container {
+  background: #eaffea;
+  border-radius: 22px;
+  max-width: 340px;
+  width: 90vw;
+  margin: 32px auto;
+  padding: 28px 18px 24px 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1em;
+  color: #222;
+  margin: 0 0 18px 0;
+  line-height: 1.28;
+}
+
+.email {
+  margin: 0;
+  font-weight: 600;
+}
+
+.email a {
+  color: #38b26d;
+  text-decoration: none;
+  word-break: break-all;
+  font-weight: 400;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 400px) {
+  .container {
+    padding: 18px 6vw 14px 6vw;
+  }
+  h1 {
+    font-size: 1.35em;
+  }
+}
+.site-title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+  color: #222;
+  margin-left: -36px;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  letter-spacing: 0.5px;
+}

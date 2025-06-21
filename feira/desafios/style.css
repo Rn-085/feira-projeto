@@ -1,0 +1,195 @@
+:root {
+  --green-dark: #58754f;
+  --green-mid: #7fa36a;
+  --green-light: #b3d1b1;
+  --header-height: 56px;
+  --nav-height: 34px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #fff;
+}
+
+/* Header */
+header {
+  background: var(--green-dark);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 16px;
+}
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.site-title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+  color: #222;
+  margin-left: -32px;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #222;
+  cursor: pointer;
+}
+nav {
+  background: var(--green-mid);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+nav li {
+  flex: 1;
+  text-align: center;
+}
+nav a {
+  display: inline-block;
+  padding: 6px 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 2px solid transparent;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+nav .active a,
+nav a:hover,
+nav a:focus {
+  background: #6c8e5e;
+  border-bottom: 2px solid #fff;
+}
+
+/* Main content */
+main {
+  margin-top: calc(var(--header-height) + var(--nav-height));
+  padding: 16px 0 24px 0;
+  min-height: 100vh;
+}
+
+/* Challenge Header */
+.challenge-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.medal-icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 4px;
+}
+.challenge-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #222;
+  font-size: 1em;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+/* Challenge List */
+.challenge-list {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.challenge-card {
+  background: #eaffed;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 14px 44px 8px 16px;
+  margin-bottom: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 58px;
+  border: 2px solid #d6f5d6;
+}
+.challenge-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1em;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.star-badge {
+  color: #ffd700;
+  font-size: 1.2em;
+  margin-left: 6px;
+}
+.challenge-done {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.9em;
+  color: #6c8e5e;
+  margin-bottom: 0;
+  cursor: pointer;
+  margin-left: 2px;
+}
+.arrow {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.55em;
+  color: #68a06b;
+  font-weight: bold;
+  pointer-events: none;
+}
+.destacado .star-badge {
+  display: inline;
+}
+.challenge-card .star-badge {
+  display: none;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .site-title {
+    font-size: 1.3em;
+    margin-left: -14px;
+  }
+  .medal-icon {
+    width: 54px;
+    height: 54px;
+  }
+  .challenge-list {
+    gap: 8px;
+  }
+  .challenge-card {
+    padding-right: 34px;
+  }
+}
