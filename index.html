@@ -1,125 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <title>aiye</title>
+    
+    <meta charset="UTF-8">
+     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    
+   
 </head>
 <body>
- <header>
-  <div class="header-bar">
-    <img src="./IMG_8085.PNG" alt="logo" class="logo">
-    <span classs="site-title">aiye</span>
-    <button class="menu-btn">&#9776;</button>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="./videos/index.html">video</a></li>
-      <li><a href="./noticia/index.html">noticias</a></li>
-      <li><a href="./desafios/index.html">desafios</a></li>
-      <li><a href="./atividades/index.html">atividades</a></li>
-    </ul>
-  </nav>
-  
-  <div class="search-bar">
-    <input type="text" placeholder="Pesquisar Ecopontos" class="search-input">
-    <button type="submit">Buscar</button>
-  </div>
- </header>
- <header>
-    <div class="header-bar">
-      <img src="./IMG_8085.PNG" alt="Logo" class="logo">
-      <span class="site-title">Aiyê</span>
-      <button class="menu-btn" id="openMenu">&#9776;</button>
-    </div>
-    <!-- O menu popup -->
-    <div class="popup-menu" id="popupMenu">
-      <ul>
-        <li>
-          <span class="material-icons-outlined">person</span>
-          <a href="./login/index.html">
-          Login
-        </li>
-        <li>
-          <span class="material-icons-outlined">help_outline</span>
-          <a href="./central/index.html">
-          Central de ajuda
-        </li>
-        <li>
-          <span class="material-icons-outlined">flag</span>
-          <a href="./reporta/index.html">
-          Reportar erro
-        </li>
-      </ul>
-    </div>
-  </header>
-  <script>
-    const btn = document.getElementById('openMenu');
-    const menu = document.getElementById('popupMenu');
-    document.addEventListener('click', function(e){
-      if(btn.contains(e.target)){
-        menu.classList.toggle('show');
-      } else if(!menu.contains(e.target)){
-        menu.classList.remove('show');
-      }
-    });
-  </script>
-  
- <main>
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <h1>aiye</h1>
-      <p>Uma forma diferente de<br>
-      combater a poluição e ajudar o<br>
-      meio ambiente.</p>
-    </div>
-  </section>
-<style>
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px; /* Espaçamento entre os cards */
-  justify-content: center;
-}
+    <form action="*" method="post">
+    <div class="input-group">
+        <h2>Login</h2>
+        <form id="loginform">
+            <div class="input-container">
+               
+                <input placeholder="Usuario" type="text" id="username"name="username" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/user.png" alt="user"/>
+            </div>
+            <div class="input-container">
+                <input placeholder= "Senha" type="password" id="password" name="password" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/password--v1.png" alt="password--v1"/>
+                
+                
+            </div>
+           <button type="submit">entrar</button>
+            </form>
+            <script>
+                const loginform =document.getElementById('loginform');
+                loginform.addEventListener('sunmit',function (event) {
+                    event.preventDefault();
+                    const usernameInput = document.getElementById('username');
+                    const passwordInput =document.getElementById('password');
+                    
+                    const username = usernameInput.value;
+                    const password=passwordInput.value;
 
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  width: 300px; /* Largura dos cards */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-</style>
-</main>
-  <section class="container">
+                    if(username ==='usuario' && password === '12345' ){
+                        alert('login bem-sucedido');
+                       window.location.href= 'pagina_principal'; 
+
+                    }
+                    else {
+                        alert('Nome de usuario ou senha incorreta.')
+                    }
+                });
+              
+            </script>
+    </div>
     
-    <div class="card"  style="background-image:url('Imagem\ do\ WhatsApp\ de\ 2025-06-18\ à\(s\)\ 23.05.48_acef5b04.jpg')">
-      <a href="./sobre/index.html">
-      <span>Sobre nós</span>
-    </div>
-    <div class="card" style="background-image:url('Imagem\ do\ WhatsApp\ de\ 2025-06-18\ à\(s\)\ 23.05.48_6b48765a.jpg')">
-      <a href="./projeto/index.html">
-      <span>Projetos</span>
-    </div>
-    <div class="card" style="background-image:url('Imagem\ do\ WhatsApp\ de\ 2025-06-18\ à\(s\)\ 23.05.47_f2de2c23.jpg')">
-      <a href="./parceiros/index.html">
-      <span>Parceiros</span>
-    </div>
-    <div class="card" style="background-image:url('Imagem\ do\ WhatsApp\ de\ 2025-06-18\ à\(s\)\ 23.05.47_ecd5967c.jpg')">
-      <a href="./fundadores/index.html">
-      <span>Fundadores</span>
-       
-    </div>
-  </section>
-  <div class="gradient-overlay"></div>
- 
 </body>
 </html>
